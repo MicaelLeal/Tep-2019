@@ -1,0 +1,11 @@
+<div class="card bg-light" style="width: 18rem;"
+  *ngFor="let task of tasks" (click)="onSelect(task)">
+  <div class="card-body" *ngIf="task!=selectedTask">
+    <h5 class="card-title">{{ task.description }}</h5>
+    <div *ngIf="selectedTask && (task===selectedTask)">
+        <h6 >Member: {{ task.team_member }}</h6>
+        <h6 >Percentage: {{ task.percentage }}</h6>
+    </div>
+  </div>
+  <app-task-detail [task]="task" *ngIf="task===selectedTask"></app-task-detail>
+</div>

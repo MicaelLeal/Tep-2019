@@ -1,0 +1,13 @@
+<div class="card .bg-white" style="width: 18rem;" *ngIf="task">
+  <div class="card-body">
+    <h5 class="text-monospace text-center">
+        Task Detail
+    </h5>
+    <b><label>Description:</label></b>
+    <input [(ngModel)]="task.description" placeholder="description">
+    <b><label>Member:</label></b>
+    <input [(ngModel)]="task.team_member" placeholder="team_member">
+    <b><label>Percentage:</label></b>
+    <input [(ngModel)]="task.percentage" placeholder="percentage">
+  </div>
+</div>
